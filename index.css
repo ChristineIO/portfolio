@@ -18,7 +18,7 @@ body {
     background-color: var(--page);  
 }
 
-body, h1, h2, h3, h4, h5, h6 {
+body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
 }
@@ -52,6 +52,8 @@ body, h1, h2, h3, h4, h5, h6 {
     padding: 20px;
     font-size: 14px;
     color: var(--outline);
+    justify-content: center;
+    display: inline-flex;
 }
 
 .window-controls {
@@ -80,16 +82,22 @@ body, h1, h2, h3, h4, h5, h6 {
     background-color: var(--accent);
     border: 2px solid var(--outline);
     border-radius: 100px;
-    padding: 6px;
+    padding: 5px;
     width: 40px;
     height: 40px;
     justify-content: center;
-    display: flex;
-align-items: center;
+    align-items: center;
+    display: inline-flex;
+    margin-right: 10px;
 }
 
 .profile svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     color: var(--page);
+    padding: 1px;
+}
+
+.text:first-child {
+
 }
