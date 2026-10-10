@@ -106,3 +106,9 @@ body, h1, h2, h3, h4, h5, h6, p {
     font-weight: bold;  
     font-size: 16px;
 }
+
+.repo {
+    width: 30% !important;
+    height: auto;
+    margin: 6px; 
+}
