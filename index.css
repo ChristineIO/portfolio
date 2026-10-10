@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root {
+    --page: #F4F2F7;
+    --window: #FFFFFF;  
+    --title-bar: #E6E1F0;
+    --outline: #2E2A3B;
+    --accent: #7C5CE0;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--page);  
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+}
+
+.card {
+    border: 3px solid var(--outline);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card .header {
+    background-color: var(--title-bar);
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    border-bottom: 3px solid var(--outline);
+    padding: 8px 8px 8px 16px;
+    justify-content: center;
+    display: flex;
+}
+
+.card .header h1 {
+    align-items: left;
+}
+
+.card .content {
+    padding: 20px;
+    font-size: 14px;
+    color: var(--outline);
+}
+
+.window-controls, .window-controls .button {
+    display: flex;
+    gap: 2px;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.window-controls .button {
+    background-color: var(--page);
+    border: 1px solid var(--outline);
+    color: var(--page);
+    margin: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+}
