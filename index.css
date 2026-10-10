@@ -75,3 +75,21 @@ body, h1, h2, h3, h4, h5, h6 {
 .window-controls .button:last-child {
     background-color: var(--accent);
 }
+
+.profile {
+    background-color: var(--accent);
+    border: 2px solid var(--outline);
+    border-radius: 100px;
+    padding: 6px;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    display: flex;
+align-items: center;
+}
+
+.profile svg {
+    width: 20px;
+    height: 20px;
+    color: var(--page);
+}
