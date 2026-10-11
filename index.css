@@ -146,6 +146,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     min-width: 0;
     height: auto;
     margin-bottom: 12px;
+    cursor: pointer;
 }
 
 .main-lang {
