@@ -213,3 +213,12 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     box-shadow: 3px 3px 0 var(--outline);
     cursor: pointer;
 }
+
+.repo-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    min-height: 2lh;
+}

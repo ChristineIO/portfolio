@@ -34,6 +34,9 @@ fetch(url)
                 card.querySelector(".star-count").textContent = info.stargazers_count
                 card.querySelector(".updated").textContent = formatCustomDate(info.updated_at)
 
+                card.querySelector(".card-button").addEventListener('click', () => {
+                    window.open(info.html_url, "_blank")
+                })
                 console.log(info)
                 reposContainer.appendChild(card)
             }
