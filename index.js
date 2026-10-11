@@ -1,40 +1,67 @@
 const url = "https://api.github.com/users/ChristineIO/repos"
 
+let formatCustomDate = (isoString) => {
+    const date = new Date(isoString);
+
+    const formatted = new Intl.DateTimeFormat('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric',
+        timeZone: 'UTC'
+    }).format(date)
+
+
+    return formatted.replace(',', '');
+}
+
 fetch(url)
     .then((response) => response.json())
     .then(repos => {
-
+        let reposContainer = document.querySelector(".repos-container")
         repos.forEach(info => {
-            let formatCustomDate = (isoString) => {
-                const date = new Date(isoString);
+            if (info.name !== "portfolio" && info.description) {
+                const card = document.createElement("div")
+                card.className = "card repo"
 
-                const formatted = new Intl.DateTimeFormat('en-US', {
-                    month: 'long',
-                    day: 'numeric',
-                    year: 'numeric',
-                    timeZone: 'UTC'
-                }).format(date)
+                reposContainer.appendChild(card)
 
+                const repoName = document.createElement("h1");
+                repoName.textContent = info.name;
+                repoName.className = "repo-name";
+                card.appendChild(repoName);
 
-                return formatted.replace(',', '');
-            }
+                const repoDescription = document.createElement("p");
+                repoDescription.textContent = info.description;
+                card.appendChild(repoDescription);
 
+                const mainLang = document.createElement("span");
+                mainLang.className = "main-lang";
+                mainLang.textContent = info.language;
+                card.appendChild(mainLang);
 
-            const card = document.createElement("div")
-            card.className = "card repo"
+                const starCount = document.createElement("span");
+                starCount.className = "star";
+                starCount.textContent = info.stargazers_count;
+                card.appendChild(starCount);
 
-            if (info.visibilty !== "public" && info.name !== "portfolio" && info.description) {
+                const updateTime = document.createElement("span");
+                updateTime.className = "time";
+                updateTime.textContent = formatCustomDate(info.updated_at);
+                card.appendChild(updateTime);
 
-                document.getElementById("repo").textContent = info.name
-                document.getElementById("desc").textContent = info.description
-                document.getElementById("main-lang").textContent = info.language
-                document.getElementById("star").textContent = info.stargazers_count
-                document.getElementById("time").textContent = formatCustomDate(info.updated_at)
-
-                document.getElementById("button").addEventListener("click", function () {
+                const viewButton = document.createElement("button");
+                viewButton.className = "card-button";
+                viewButton.textContent = "View Repository";
+                viewButton.addEventListener("click", function () {
                     window.open(info.html_url, "_blank")
-                })
+                });
+                card.appendChild(viewButton);
+                console.log(info)
             }
-            console.log(info)
+
+            else {
+                console.log("not public or no description")
+            }
+            
         })
     })
