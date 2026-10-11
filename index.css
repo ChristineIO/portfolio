@@ -38,7 +38,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 
 .card .header {
     background-color: var(--title-bar);
-    font-size: 8px;
+    font-size: 10px;
     font-weight: bold;
     text-align: left;
     border-bottom: 3px solid var(--outline);
@@ -52,12 +52,14 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 }
 
 .card .content {
-    padding: 20px;
+    padding: 25px;
     font-size: 14px;
     color: var(--outline);
     justify-content: center;
     align-items: center;
     display: inline-flex;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 .window-controls {
@@ -70,7 +72,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 
 .window-controls .button {
     background-color: var(--page);
-    border: 2px solid var(--outline);
+    border: 2.8px solid var(--outline);
     color: var(--page);
     margin: 4px;
     width: 16px;
@@ -84,11 +86,11 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 
 .profile {
     background-color: var(--accent);
-    border: 2px solid var(--outline);
+    border: 3px solid var(--outline);
     border-radius: 100px;
     padding: 5px;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     justify-content: center;
     align-items: center;
     display: inline-flex;
@@ -96,19 +98,25 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 }
 
 .profile svg {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     color: var(--page);
     padding: 1px;
 }
 
 .text h2 {
     font-weight: bold;  
-    font-size: 16px;
+    font-size: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
+.text p {
+    font-size: 17px;
+    color: var(--outline);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
 /* repos */
 
@@ -131,7 +139,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     width: 80% !important;
     min-width: 0;
     height: auto;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .main-lang {
@@ -172,7 +180,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 
 .star span, .star svg {
     margin-left: 8px;
-        font-size: 12px;
+    font-size: 14px;
 }
 
 .time {
