@@ -26,11 +26,14 @@ fetch(url)
 
                 card.querySelector(".repo-name").textContent = info.name
                 card.querySelector(".repo-desc").textContent = info.description
-                card.querySelector(".main-lang").textContent = info.language
+                if(info.language) {
+                    card.querySelector(".main-lang").textContent = info.language
+                } else {
+                    card.querySelector(".main-lang").textContent = "N/A"
+                }
                 card.querySelector(".star-count").textContent = info.stargazers_count
                 card.querySelector(".updated").textContent = formatCustomDate(info.updated_at)
-// 
-//                 card.appendChild(viewButton);
+
                 console.log(info)
                 reposContainer.appendChild(card)
             }
