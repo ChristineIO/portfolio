@@ -15,10 +15,10 @@
 
 body {
     margin: 0;
-    background-color: var(--page);  
+    background-color: var(--page);
 }
 
-body, h1, h2, h3, h4, h5, h6, p {
+body, h1, h2, h3, h4, h5, h6, p, svg, span {
     margin: 0;
     padding: 0;
 }
@@ -38,7 +38,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 .card .header {
     background-color: var(--title-bar);
-    font-size: 10px;
+    font-size: 8px;
     font-weight: bold;
     text-align: left;
     border-bottom: 3px solid var(--outline);
@@ -105,10 +105,72 @@ body, h1, h2, h3, h4, h5, h6, p {
 .text h2 {
     font-weight: bold;  
     font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* repos */
+
+.repos-container {
+    padding: 20px;
+    justify-content: left;
+    display: flex;
 }
 
 .repo {
-    width: 30% !important;
+    width: 40% !important;
     height: auto;
     margin: 6px; 
+}
+
+.main-lang, star {
+    background-color: var(--page);
+    border: 2px solid var(--outline);
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    width:max-content;
+    height: auto;
+    color: var(--accent);
+
+}
+
+.main-lang, .star {
+    padding: 4px 10px 4px 10px;
+    margin-top: 15px;
+    justify-content: center;
+    text-align: center;
+    width: max-content;
+    height: auto;
+
+}
+
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 200;
+}
+
+.star {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+    color: var(--outline);
+}
+
+.star span, .star svg {
+    margin-left: 8px;
+        font-size: 12px;
+}
+
+.time {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-top: 15px;
 }
