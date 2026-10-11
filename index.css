@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
     --page: #F4F2F7;
@@ -10,7 +11,7 @@
 
 * {
     box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Space Mono', sans-serif;
 }
 
 body {
@@ -49,6 +50,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 
 .card .header h1 {
     align-items: left;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 .card .content {
