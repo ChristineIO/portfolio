@@ -35,6 +35,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     border-radius: 8px;
     overflow: hidden;
     width: 60%;
+    height: 100%;
 }
 
 .card .header {
@@ -144,7 +145,8 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 .repo {
     width: 80% !important;
     min-width: 0;
-    height: auto;
+    height: 100%;
+    margin-top: 8px;
     margin-bottom: 12px;
 }
 
