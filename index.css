@@ -146,7 +146,6 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     min-width: 0;
     height: auto;
     margin-bottom: 12px;
-    cursor: pointer;
 }
 
 .main-lang {
@@ -210,4 +209,5 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     display: flex;
     border: 2px solid var(--outline);
     box-shadow: 3px 3px 0 var(--outline);
+    cursor: pointer;
 }
