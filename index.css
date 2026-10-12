@@ -94,7 +94,7 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     border: 3px solid var(--outline);
     border-radius: 100px;
     padding: 5px;
-    width: 85px;
+    width: 90px;
     height: 85px;
     justify-content: center;
     align-items: center;
@@ -230,3 +230,9 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
     min-height: 2lh;
 }
 
+.repo-name {
+    overflow: hidden;
+    max-width: 10ch;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
