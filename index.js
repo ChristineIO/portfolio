@@ -37,7 +37,6 @@ fetch(url)
                 card.querySelector(".card-button").addEventListener('click', () => {
                     window.open(info.html_url, "_blank")
                 })
-                console.log(info)
                 reposContainer.appendChild(card)
             }
 
