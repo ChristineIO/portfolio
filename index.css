@@ -74,18 +74,36 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 }
 
 .window-controls .button {
-    background-color: var(--page);
+    background-color: var(--window);
     border: 2.8px solid var(--outline);
-    color: var(--page);
+    color: var(--outline);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
     margin: 4px;
-    width: 16px;
-    height: 16px;
+    width: 21px;
+    height: 20px;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    padding-bottom: 2px;
 }
 
-.window-controls .button:last-child {
-    background-color: var(--accent);
+.window-controls .button:hover {
+    background-color: var(--page);
 }
+
+.window-controls .button:last-child:hover {
+    background-color: var(--accent);
+    color: var(--page);
+}
+
+
+
+
 
 .profile {
     background-size: cover;
@@ -232,7 +250,16 @@ body, h1, h2, h3, h4, h5, h6, p, svg, span {
 
 .repo-name {
     overflow: hidden;
-    max-width: 10ch;
-    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
     text-overflow: ellipsis;
 }
+
+
+
+
+
+
+
+
+
